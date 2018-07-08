@@ -69,8 +69,12 @@ public class FallingPlatform : MonoBehaviour {
 		// Wait the set time before destroying the object (to play the animation)
 		yield return new WaitForSeconds (destroyAfterTime);
 
-		// Destroy the object
-		//Destroy (gameObject);
+        // Destroy the object
+        //Destroy (gameObject);
+        yield return new WaitForSeconds(5);
+        // Wait 5000 ms
+        ResetPlatform();
+        // Replace platform
 	}
 
 	[ContextMenu("Reset Platform")]
